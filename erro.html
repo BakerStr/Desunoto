@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>✝️ Erro ✝️</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+
+  <script>
+    function imageZoom(imgID, resultID) {
+      var img, lens, result, cx, cy;
+      img = document.getElementById(imgID);
+      result = document.getElementById(resultID);
+      /*create lens:*/
+      lens = document.createElement("DIV");
+      lens.setAttribute("class", "img-zoom-lens");
+      /*insert lens:*/
+      img.parentElement.insertBefore(lens, img);
+      /*calculate the ratio between result DIV and lens:*/
+      cx = result.offsetWidth / lens.offsetWidth;
+      cy = result.offsetHeight / lens.offsetHeight;
+      /*set background properties for the result DIV:*/
+      result.style.backgroundImage = "url('" + img.src + "')";
+      result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+      /*execute a function when someone moves the cursor over the image, or the lens:*/
+      lens.addEventListener("mousemove", moveLens);
+      img.addEventListener("mousemove", moveLens);
+      /*and also for touch screens:*/
+      lens.addEventListener("touchmove", moveLens);
+      img.addEventListener("touchmove", moveLens);
+
+      function moveLens(e) {
+        var pos, x, y;
+        /*prevent any other actions that may occur when moving over the image:*/
+        e.preventDefault();
+        /*get the cursor's x and y positions:*/
+        pos = getCursorPos(e);
+        /*calculate the position of the lens:*/
+        x = pos.x - (lens.offsetWidth / 2);
+        y = pos.y - (lens.offsetHeight / 2);
+        /*prevent the lens from being positioned outside the image:*/
+        if (x > img.width - lens.offsetWidth) {
+          x = img.width - lens.offsetWidth;
+        }
+        if (x < 0) {
+          x = 0;
+        }
+        if (y > img.height - lens.offsetHeight) {
+          y = img.height - lens.offsetHeight;
+        }
+        if (y < 0) {
+          y = 0;
+        }
+        /*set the position of the lens:*/
+        lens.style.left = x + "px";
+        lens.style.top = y + "px";
+        /*display what the lens "sees":*/
+        result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+      }
+
+      function getCursorPos(e) {
+        var a, x = 0,
+          y = 0;
+        e = e || window.event;
+        /*get the x and y positions of the image:*/
+        a = img.getBoundingClientRect();
+        /*calculate the cursor's x and y coordinates, relative to the image:*/
+        x = e.pageX - a.left;
+        y = e.pageY - a.top;
+        /*consider any page scrolling:*/
+        x = x - window.pageXOffset;
+        y = y - window.pageYOffset;
+        return {
+          x: x,
+          y: y
+        };
+      }
+    }
+  </script>
+</head>
+
+<body id="nolight" class="lightoff">
+  <img id="help" class="eye" src="images/Olhoemvc.png" alt="">
+  <img id="open" class="door" src="images/door.png" alt="">
+  <div id="myresult" class="img-zoom-result"></div>
+
+
+
+
+  <div class="div2">
+    <form>
+      <label id="snh" class="senha" for="pswd">Senha: </label>
+      </br>
+      <input id="pswd" class="box" type="password" keypress="checkPswd();">
+      </br>
+      <input id="enviar" class="verificar" class="enviar" type="button" value="Verificar" onclick="checkPswd();" />
+    </form>
+  </div>
+  <script type="text/javascript">
+    var input = document.getElementById("pswd");
+    input.addEventListener("keypress", function(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("enviar").click();
+      }
+    });
+
+    function checkPswd() {
+      var confirmPassword = "16109";
+      var password = document.getElementById("pswd").value;
+      if (password == confirmPassword) {
+        window.location.href = "file:///C:/Users/Santiago%20Neto/Desktop/Web%20Development%200.2/HTML%20-%20Desunoto/index.html";
+      } else {
+        alert("Senha incorreta");
+      }
+    }
+  </script>
+
+
+
+  <div id="dc1" class="dica1">
+    <p>Muito difícil?</p>
+    <p>Vou dar uma dica:</p>
+    <p>A abscissa tem 2 dígitos,</p>
+    <p>mas a cota só tem 1!!!</p>
+  </div>
+  <div id="dc2" class="dica2">
+    <p>Mais uma dica?</p>
+    <p>Ok.</p>
+    <p>A peça que falta</p>
+    <p>possuiria o tom de cinza mediano!!!</p>
+  </div>
+  <div id="dc3" class="dica3">
+    <p>Se quiser pode testar as combinações</p>
+    <p>das coordenadas até acertar a senha.</p>
+    <p>Levando em consideração a primeira dica,</p>
+    <p>terá 205 combinações para testar!!!</p>
+  </div>
+  <div id="dc4" class="dica4">
+    <p>Mas se for levar em consideração também a segunda dica, então...</p>
+    <p>Serão 117 combinações!!!</p>
+  </div>
+  <div id="dc5" class="dica5">
+    <p>Se já cansou de procurar, é só apertar CTRL+U,</p>
+    <p>e ir até a linha 110</p>
+  </div>
+  <div id="dc6" class="dica6">
+    <p><spam style="font-size: 120%;">Foi um prazer jogarmos juntos!!!</spam></p>
+  </div>
+
+
+  <img id="myimage" class="found" src="Images/cubicpuzzle.png" alt="vida">
+
+  <script>
+    imageZoom("myimage", "myresult");
+  </script>
+
+
+
+  <audio id="play" loop>
+    <source src="Sound/Puzzle Game.mp3" type="audio/mp3">
+  </audio>
+
+  <div class="instrução1" id=1 onclick="primeiraetapa(1);">
+    <h1 class="topvisivel">Vamos começar com um jogo!!!</h1>
+    <br>
+    <p>Para entrar no site, terá que descobrir a senha.</p>
+    <p>Ao começar encontrará uma escultura com peças de quebra-cabeça.</p>
+    <p>Nessa figura terá que encontrar a peça que está faltando.</p>
+    <p>As coordenadas desta peça é a senha.</p>
+    <p>Para ficar mais claro, vou dar um exemplo.</p>
+  </div>
+  <div class="instrução2" id=2 onclick="segundaetapa(2)">
+    <h2>Em nosso exemplo, a peça que falta está em vermelho.</h2>
+    <img class="puzzle-red" src="Images/Exemple puzzle red.png" alt="">
+  </div>
+  <div class="instrução3" id=3 onclick="começar(3)" type="checkbox">
+    <img class="puzzle-coo" src="Images/Exemple puzzle coordenadas.png" alt="">
+    <p>As coordenadas seguem a ordem <strong>X, Y, Z.</strong></p>
+    <p><strong>X</strong>, que está em <strong>azul</strong>, é a quantidade de peças na horizontal(peças deitadas)
+      que contamos da <strong>ponta inferior</strong> para a <strong>esquerda.</strong></p>
+    <p><strong>Y</strong>, que está em <strong>verde</strong>, é a quantidade de peças na horizontal(peças deitadas)
+      que contamos da <strong>ponta inferior</strong> para a <strong>direita.</strong></p>
+    <p><strong>Z</strong>, que está em <strong>amarelo</strong>, é a <strong>altura</strong> ou a quantidade de peças na vertical(peças de pé)
+      que contamos da coluna partindo da base.</p>
+      <br>
+    <h3 style="text-align: center;">COMEÇAR</h3>
+  </div>
+
+  <script>
+    function primeiraetapa(divid) {
+      document.getElementById("2").style.display = "table";
+      document.getElementById("1").style.display = "none";
+    }
+  </script>
+
+  <script>
+    function segundaetapa(divid) {
+      document.getElementById("3").style.display = "table";
+      document.getElementById("2").style.display = "none";
+    }
+  </script>
+
+  <script>
+    function começar(divid) {
+      document.getElementById("myresult").style.animationPlayState = "running";
+      document.getElementById("dc6").style.animationPlayState = "running";
+      document.getElementById("dc5").style.animationPlayState = "running";
+      document.getElementById("dc4").style.animationPlayState = "running";
+      document.getElementById("dc3").style.animationPlayState = "running";
+      document.getElementById("dc2").style.animationPlayState = "running";
+      document.getElementById("dc1").style.animationPlayState = "running";
+      document.getElementById("pswd").style.animationPlayState = "running";
+      document.getElementById("enviar").style.animationPlayState = "running";
+      document.getElementById("snh").style.animationPlayState = "running";
+      document.getElementById("help").style.animationPlayState = "running";
+      document.getElementById("open").style.animationPlayState = "running";
+      document.getElementById("nolight").style.animationPlayState = "running";
+      document.getElementById("myimage").style.animationPlayState = "running";
+      document.getElementById("play").play();
+      document.getElementById("3").style.display = "none";
+    }
+  </script>
+
+
+  <script type="text/javascript">
+    function playmusic() {
+      var input = document.getElementById("play").play();
+    }
+  </script>
+
+</body>
+
+</html>
