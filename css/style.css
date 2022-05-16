@@ -1,0 +1,716 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+a {
+text-decoration: none;
+}
+
+body {
+  background-color: #F8F8FB;
+  margin: 0;
+  padding: 2rem 3rem;
+}
+
+hr {
+  border: none;
+  border-top: double #BEBEBE;
+  border-width: 4px;
+  color: #BEBEBE;
+  margin-top: 2em;
+  overflow: visible;
+  padding: 0;
+  text-align: center;
+  width: 37%;
+}
+
+hr:after {
+  background: #F8F8FB;
+  color: #BEBEBE;
+  content: "✝️";
+  display: inline-block;
+  font-size: 2em;
+  padding: 0 0.2em;
+  position: relative;
+  top: -0.7em;
+}
+
+.box {
+  background-color: #BEBEBE;
+  text-align: center;
+  font-size: 20px;
+  font-family: VT323;
+  outline: none;
+  width: 250px;
+  height: 35px;
+  border: none;
+  border-bottom: 2px solid #656262;
+  animation-play-state: paused;
+  animation-name: box;
+  animation-duration: 2s;
+  animation-delay: 321s;
+  animation-fill-mode: forwards;
+}
+@keyframes box {
+  from {}
+    to {background-color: darkred;}
+
+}
+
+.box-left-bottom {
+  background-color: #F8F8FB;
+  border-bottom: double 10px;
+  border-right: double 10px;
+  display: inline-block;
+  font-family: cursive;
+  height: 430px;
+  left: 0;
+  padding: 20px;
+  position: absolute;
+  text-align: left;
+  width: 43.2%;
+}
+
+.box-right-bottom {
+  background-color: #F8F8FB;
+  border-bottom: double 10px;
+  border-left: double 10px;
+  display: inline-block;
+  font-family: cursive;
+  height: 430px;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  width: 43.2%;
+}
+
+.box-left-top {
+  background-color: #F8F8FB;
+  border-top: double 10px;
+  border-right: double 10px;
+  display: inline-block;
+  font-family: cursive;
+  height: 430px;
+  left: 0;
+  padding: 20px;
+  position: absolute;
+  text-align: left;
+  width: 43.2%;
+}
+
+.box-right-top {
+  background-color: #F8F8FB;
+  border-top: double 10px;
+  border-left: double 10px;
+  display: inline-block;
+  font-family: cursive;
+  height: 430px;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  width: 43.2%;
+}
+
+.button {
+  color: #224C99;
+  margin-bottom: 0;
+}
+.button:hover {
+  filter: brightness(200%);
+}
+
+
+.col {
+  text-align: left;
+  display: inline-flex;
+  position: relative;
+  top: 0;
+  width: 45%;
+  height: 100%;
+  padding: .2rem;
+  border-radius: .5rem;
+}
+
+.conteiner {
+  display: inline-block;
+  height: 480px;
+  margin-top: 2rem;
+  position: relative;
+  width: 94.7%;
+}
+
+.cruz {
+  background-color: #000000;
+  border: double 10px;
+  color: #F8F8FB;
+  display: inline-block;
+  font-size: 50px;
+  margin-top: 2rem;
+  padding: 0;
+  position: relative;
+  width: 93%;
+}
+
+.dark {
+  background-color: #000000;
+  font-family: Verdana;
+  font-size: 25px;
+  padding: 0;
+  text-align: justify;
+}
+
+.dica1 {
+  background-color: rgba(180, 180, 180, 0.5);
+  backdrop-filter: blur(5px);
+  text-align: center;
+  vertical-align: middle;
+  font-family: VT323;
+  font-size: 30px;
+  color: #000000;
+  height: auto;
+  width: auto;
+  display: table;
+  position: absolute;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0%;
+  margin: auto auto 10% 20%;
+  animation-play-state: paused;
+  animation-name: dica1;
+  animation-duration: 20s;
+  animation-delay: 324s;
+  animation-fill-mode: none;
+  animation-timing-function: linear;
+}
+@keyframes dica1 {
+  0% {opacity: 0%;}
+  15% {opacity: 100%;}
+  100% {opacity: 100%;}
+}
+
+.dica2 {
+  background-color: rgba(180, 180, 180, 0.5);
+  backdrop-filter: blur(5px);
+  text-align: center;
+  vertical-align: middle;
+  font-family: VT323;
+  font-size: 30px;
+  color: #000000;
+  height: auto;
+  width: auto;
+  display: table;
+  position: absolute;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0%;
+  margin: auto auto 10% 20%;
+  animation-play-state: paused;
+  animation-name: dica2;
+  animation-duration: 20s;
+  animation-delay: 404s;
+  animation-fill-mode: none;
+  animation-timing-function: linear;
+}
+@keyframes dica2 {
+  0% {opacity: 0%;}
+  15% {opacity: 100%;}
+  100% {opacity: 100%;}
+}
+
+.dica3 {
+  background-color: rgba(180, 180, 180, 0.5);
+  backdrop-filter: blur(5px);
+  text-align: center;
+  vertical-align: middle;
+  font-family: VT323;
+  font-size: 30px;
+  color: #000000;
+  height: auto;
+  width: auto;
+  display: table;
+  position: absolute;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0%;
+  margin: auto auto 10% 20%;
+  animation-play-state: paused;
+  animation-name: dica3;
+  animation-duration: 20s;
+  animation-delay: 454s;
+  animation-fill-mode: none;
+  animation-timing-function: linear;
+}
+@keyframes dica3 {
+  0% {opacity: 0%;}
+  15% {opacity: 100%;}
+  100% {opacity: 100%;}
+}
+
+.dica4 {
+  background-color: rgba(180, 180, 180, 0.5);
+  backdrop-filter: blur(5px);
+  text-align: center;
+  vertical-align: middle;
+  font-family: VT323;
+  font-size: 30px;
+  color: #000000;
+  height: auto;
+  width: auto;
+  display: table;
+  position: absolute;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0%;
+  margin: auto auto 10% 20%;
+  animation-play-state: paused;
+  animation-name: dica4;
+  animation-duration: 20s;
+  animation-delay: 504s;
+  animation-fill-mode: none;
+  animation-timing-function: linear;
+}
+@keyframes dica4 {
+  0% {opacity: 0%;}
+  15% {opacity: 100%;}
+  100% {opacity: 100%;}
+}
+
+.dica5 {
+  background-color: rgba(180, 180, 180, 0.5);
+  backdrop-filter: blur(5px);
+  text-align: center;
+  vertical-align: middle;
+  font-family: VT323;
+  font-size: 30px;
+  color: #000000;
+  height: auto;
+  width: auto;
+  display: table;
+  position: absolute;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0%;
+  margin: auto auto 10% 20%;
+  animation-play-state: paused;
+  animation-name: dica5;
+  animation-duration: 15s;
+  animation-delay: 554s;
+  animation-fill-mode: none;
+  animation-timing-function: linear;
+}
+@keyframes dica5 {
+  0% {opacity: 0%;}
+  15% {opacity: 100%;}
+  100% {opacity: 100%;}
+}
+
+.dica6 {
+  background-color: rgba(180, 180, 180, 0.5);
+  backdrop-filter: blur(5px);
+  text-align: center;
+  vertical-align: middle;
+  font-family: VT323;
+  font-size: 30px;
+  color: #000000;
+  height: auto;
+  width: auto;
+  display: table;
+  position: absolute;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0%;
+  margin: auto auto 10% 20%;
+  animation-play-state: paused;
+  animation-name: dica6;
+  animation-duration: 10s;
+  animation-delay: 570s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+@keyframes dica6 {
+  0% {opacity: 0%;}
+  15% {opacity: 100%;}
+  100% {opacity: 100%;}
+}
+
+.div2 {
+  text-align: center;
+  vertical-align: middle;
+  font-family: VT323;
+  font-size: 25px;
+  color: #656262;
+  height: 14%;
+  width: 33.33%;
+  display: table;
+  position: absolute;
+  left:0;
+  right: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.door {
+  left: 0px;
+  margin: 0;
+  position: fixed;
+  transform: rotateY(90deg);
+  width: 29.1%;
+  animation-play-state: paused;
+  animation-name: door;
+  animation-duration: 5s;
+  animation-delay: 301s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+@keyframes door {
+  from {transform: rotateY(90deg); left: -180px; filter: brightness(0%);}
+  to {transform: rotateY(180deg); left: 0px; filter: brightness(100%);}
+}
+
+.enfase {
+  color: #1D9D7D;
+}
+
+.enviar {
+  border: none;
+  font-size: 20px;
+  font-family: VT323;
+  margin-top: 10px;
+  color: #656262;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.eye {
+  position: fixed;
+  left: -550px;
+  margin: 0;
+  width: 45.5%;
+  animation-play-state: paused;
+  animation-name: eye;
+  animation-duration: 15s;
+  animation-delay: 307s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(1,.4,.5,.7,1);
+}
+@keyframes eye {
+  0% {left: -550px; filter: brightness(0%);}
+  70% {filter: brightness(0%);}
+  90% {filter: brightness(100%);}
+  100% { left: 28.2%; filter: brightness(100%);}
+}
+
+.found {
+  bottom: 0;
+  left: 0;
+  margin: 3% auto auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30%;
+  animation-play-state: paused;
+  animation-name: found;
+  animation-duration: 5s;
+  animation-delay: 295s;
+  animation-fill-mode: forwards;
+}
+@keyframes found {
+  from {bottom: 0;}
+  to {bottom: 50%; left: 67%; margin-top: 0;}
+
+}
+
+.hob {
+  display: inline-block;
+  text-align: right;
+}
+
+.htext {
+  color: #000000;
+  font-size: 25px;
+}
+
+.img-zoom-lens {
+  position: absolute;
+  /*set the size of the lens:*/
+  width: 80px;
+  height: 80px;
+}
+
+.img-zoom-result {
+  border: 2px solid #BEBEBE;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  /*set the size of the result div:*/
+  width: 20%;
+  height: 40%;
+  animation-play-state: paused;
+  animation-name: lupa;
+  animation-duration: 5s;
+  animation-delay: 295s;
+  animation-fill-mode: forwards;
+}
+@keyframes lupa {
+  0% {width: 20%; height: 40%;}
+  100% {width: 17%; height: 34%;}
+}
+
+.instrução1 {
+  background-color: rgba(180, 180, 180, 0.5);
+  backdrop-filter: blur(5px);
+  text-align: center;
+  vertical-align: middle;
+  font-family: VT323;
+  font-size: 30px;
+  color: #000000;
+  cursor: pointer;
+  height: 95%;
+  width: 80%;
+  display: table;
+  position: absolute;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 1% auto auto;
+}
+
+.instrução2 {
+  background-color: rgba(180, 180, 180, 0.5);
+  backdrop-filter: blur(5px);
+  text-align: center;
+  vertical-align: middle;
+  font-family: VT323;
+  font-size: 30px;
+  color: #000000;
+  cursor: pointer;
+  height: 95%;
+  width: 80%;
+  display: none;
+  position: absolute;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 1% auto auto;
+}
+
+.instrução3 {
+  background-color: rgba(180, 180, 180, 0.5);
+  backdrop-filter: blur(5px);
+  text-align: center;
+  vertical-align: middle;
+  font-family: VT323;
+  font-size: 30px;
+  color: #000000;
+  cursor: pointer;
+  height: 95%;
+  width: 80%;
+  display: none;
+  position: absolute;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 1% auto auto;
+}
+
+.lightoff {
+  padding: 0;
+  height: 100%;
+  animation-play-state: paused;
+  animation-name: lightoff;
+  animation-duration: 20s;
+  animation-delay: 293s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+@keyframes lightoff {
+  from {background: linear-gradient(to right,
+              black, black, black, black, black, black, black, black) ;
+        background-repeat: no-repeat;
+        background-attachment: fixed;}
+  to {background: linear-gradient(to right,
+              #404040, #3A3A3B, #323232, #272727,  #131313, black, black, black) ;
+        background-repeat: no-repeat;
+        background-attachment: fixed;}
+}
+
+.puzzle {
+  bottom: 0;
+  left: 0;
+  margin: auto auto 40px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 350px;
+}
+
+.puzzle:hover{
+  filter: contrast(200%);
+}
+
+
+.puzzle-red {
+  width: 85%;
+}
+.puzzle-coo {
+  display: inline-block;
+  width: 35%;
+  float: right;
+  margin-top: 5%;
+  margin-right: 1%;
+}
+
+.row {
+  text-align: center;
+  width: 100%;
+  padding: .5rem;
+}
+
+.senha {
+  animation-play-state: paused;
+  animation-name: senha;
+  animation-duration: 2s;
+  animation-delay: 321s;
+  animation-fill-mode: forwards;
+}
+@keyframes senha {
+  from {}
+    to {color: red;}
+
+}
+
+.SS {
+  font-family: Brush Script MT, cursive;
+  font-size: 630%;
+}
+
+.subtitle {
+  color: #F8F8FB;
+  text-align: center;
+  text-shadow:
+    -1px -1px 5px #000000,
+    -1px 1px 5px #000000,
+    1px -1px 5px #000000,
+    1px 1px 5px #000000;
+}
+
+.symbol {
+  font-size: 30px;
+  margin: 0;
+}
+
+.title {
+  color: #F8F8FB;
+  text-shadow:
+    -1px -1px 5px #000000,
+    -1px 1px 5px #000000,
+    1px -1px 5px #000000,
+    1px 1px 5px #000000;
+}
+
+.top {
+  height: 600px;
+  position: relative;
+  padding-top: 20px;
+}
+
+.verificar {
+  background-color: transparent;
+  border-style: none;
+  font-family: VT323;
+  font-size: 25px;
+  color: #656262;
+  cursor: pointer;
+  animation-play-state: paused;
+  animation-name: verificar;
+  animation-duration: 2s;
+  animation-delay: 321s;
+  animation-fill-mode: forwards;
+}
+@keyframes verificar {
+  from {}
+    to {color: red;}
+
+}
+
+.window-right {
+  position: absolute;
+  transform: rotate(30deg);
+  top: 300px;
+  right: 150px;
+  width: 150px;
+}
+
+.window-right:hover{
+  filter: invert(100%) contrast(500%) saturate(300%);
+}
+
+.window-left {
+  position: absolute;
+  transform: rotate(-30deg);
+  top: 300px;
+  left: 150px;
+  width: 150px;
+}
+
+.window-left:hover{
+  filter: brightness(500%);
+}
+
+@media (max-width:1180px) {
+  .puzzle {
+    bottom: 0;
+    left: 0;
+    margin: auto auto 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 230px;
+  }
+  .window-right {
+    position: absolute;
+    transform: rotate(30deg);
+    top: 480px;
+    right: 15px;
+    width: 90px;
+  }
+  .window-left {
+    position: absolute;
+    transform: rotate(-30deg);
+    top: 480px;
+    left: 15px;
+    width: 90px;
+  }
+}
